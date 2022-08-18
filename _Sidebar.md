@@ -1,3 +1,0 @@
-test
-
-[[Architecture|Architecture]]
