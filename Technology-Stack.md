@@ -22,7 +22,7 @@ We believe in choosing boring(a.k.a battle-tested and stable) technology to buil
 - Services built into docker images and pushed to ECR by Github Actions.
 
 ### Deployment
-- deploy onto AWS
+- Deploy onto AWS
 - Services deployed as docker containers on EC2 using Ansible.
 - Terraform for defining infrastructure.
 - EC2 host configuration done by ansible scripts; pulled and applied by cron.
