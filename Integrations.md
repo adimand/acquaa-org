@@ -2,13 +2,14 @@
 To integrate with internal systems, the options we propose (in order of preference)
 
 1. Expose APIs to provide this information
- - secured via an API key or JWT.
- - subject to rate limitations.
- - SLAs will be clearly defined and upgrades/outages clearly communicated.
+   - secured via an API key or JWT.
+   - subject to rate limitations.
+   - SLAs will be clearly defined and upgrades/outages clearly communicated.
 2. Send events/messages to a callback URL(webhook)
- - customer exposes an API endpoint where Acquaa can send events as they occur.
- - message contract will be published.
- - secured via an API key or JWT.
+   - customer exposes an API endpoint where Acquaa can send events as they occur.
+   - event contract will be published.
+   - secured via an API key or JWT.
+   - failures will be retried 3 times at exponentially increasing times (configurable).
 3. Custom integration with the system (this is time-consuming and expensive as we'll need to get an insight and access into the customer's internal systems). If done, it will most likely be through a proxy fronting the internal system.
 
 ## Data Import
