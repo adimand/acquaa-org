@@ -19,4 +19,4 @@ To integrate with internal systems, the options we propose (in order of preferen
 
 ## Logs & Reports
 - Audit logs for user actions will be provided within the app.
-- Offline (bulk) reports generated via the system.
+- Offline (bulk) reports can be generated via the system.
