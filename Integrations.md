@@ -3,6 +3,7 @@ To integrate with internal systems, the options we propose (in order of preferen
 
 1. Expose APIs to provide this information
    - secured via an API key or JWT.
+   - API will also allow updates to certain resources (e.g. internal identifiers)
    - subject to rate limitations.
    - SLAs will be clearly defined and upgrades/outages clearly communicated.
 2. Send events/messages to a callback URL(webhook)
