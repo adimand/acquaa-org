@@ -11,3 +11,10 @@ _Please note that this is evolving as we build out the product._
 5. Service logs are collected using CloudWatch in S3 and can be analysed using Insights and Athena.
 6. We will maintain periodic snapshots of the databases and also replicate to the DR region.
 7. Testers/Partners use a separate sandbox environment to test integration.
+
+**Notes:**
+- Currently, the primary VPC is in `us-east-1`(N. Virginia) and the DR is slated to be in `us-west-2`(Oregon).
+- The application supports multiple tenants and data is isolated by tagging the organization.
+- Communication is over https.
+- Data is encrypted at rest and in transit. Data that is encrypted at rest includes the underlying storage for DB instances, its automated backups, read replicas, and snapshots.
+- As Auth0 is our identity provider, we are able to support the following [enterprise identity providers](https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers).
