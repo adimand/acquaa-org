@@ -17,6 +17,8 @@ To integrate with internal systems, the options we propose (in order of preferen
 - Expose APIs to import this data into Acquaa (e.g. master data like equipment type, sizes etc.).
 - For bulk data, best expressed as a file (e.g. GIS data), we can use SFTP to push/pull required information.
 
+[[https://github.com/acquaa-org/acquaa/blob/gh-pages/images/sftp.png|SFTP Diagram]]
+
 ## Logs & Reports
 - Audit logs for user actions will be provided within the app.
 - Offline (bulk) reports can be generated via the system.
