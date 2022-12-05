@@ -1,4 +1,8 @@
 ## Integrations to internal systems (e.g. asset management systems)
+
+### General API Integration Pattern
+[[https://github.com/acquaa-org/acquaa/blob/gh-pages/images/api_integration.png|General API Integration Pattern]]
+
 To integrate with internal systems, the options we propose (in order of preference)
 
 1. Expose APIs to provide this information
