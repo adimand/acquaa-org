@@ -5,6 +5,8 @@ This includes
 - managing assets like test kits
 - performing actions on behalf of their inspectors/plumbers
 
+**NOTE:** If the plumber is part of a company, any of the company's admins can act on their behalf. Further approval is not required.
+
 ## Overview of Functionality
 [[https://github.com/acquaa-org/acquaa/blob/gh-pages/images/company_module.png|Overview]]
 
