@@ -1,8 +1,6 @@
 ## Integrations to internal systems (e.g. asset management systems)
 
-### General API Integration Pattern
-[[https://github.com/acquaa-org/acquaa/blob/gh-pages/images/api_integration.png|General API Integration Pattern]]
-
+### General API Integration Patterns
 To integrate with internal systems, the options we propose (in order of preference)
 
 1. Expose APIs to provide this information
@@ -10,11 +8,15 @@ To integrate with internal systems, the options we propose (in order of preferen
    - API will also allow updates to certain resources (e.g. internal identifiers)
    - subject to rate limitations.
    - SLAs will be clearly defined and upgrades/outages clearly communicated.
+[[https://github.com/acquaa-org/acquaa/blob/gh-pages/images/option_1_api_integration.png|Option 1]]
+
 2. Send events/messages to a callback URL(webhook)
    - customer exposes an API endpoint where Acquaa can send events as they occur.
    - event contract will be published.
    - secured via an API key or JWT.
    - failures will be retried thrice at exponentially increasing times (configurable).
+[[https://github.com/acquaa-org/acquaa/blob/gh-pages/images/option_2_api_integration.png|Option 2]]
+
 3. Custom integration with the system (this is time-consuming and expensive as we'll need to get an insight and access into the customer's internal systems). If done, it will most likely be through a proxy fronting the internal system.
 
 ## Data Import
