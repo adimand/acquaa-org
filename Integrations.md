@@ -1,23 +1,36 @@
 ## Integrations to internal systems (e.g. asset management systems)
 
-### General API Integration Patterns
-To integrate with internal systems, the options we propose (in order of preference)
+To integrate with the customer's internal systems, we propose the following options:
 
-1. Expose APIs to provide this information
-   - secured via an API key or JWT.
-   - API will also allow updates to certain resources (e.g. internal identifiers)
-   - subject to rate limitations.
-   - SLAs will be clearly defined and upgrades/outages clearly communicated.
+#### Option 1: Acquaa exposes APIs and the customer hosts a client app that will be the interface between our APIs and their internal system(s).
+
+- Communication can work with the following ways:
+  1. The client can call Acquaa to update their data or pull information out.
+  2. Business events can be sent to a client API endpoint (e.g. webhook) and can be used to update their systems.
+     * Event contracts will be published by Acquaa.
+     * Customer exposes an API endpoint where Acquaa can send events as they occur.
+- Development/deployment of client app into the customer's data centre.
+- In case of we agree to use a webhook URL to publish events, there will be some customer-side development too.
+
 [[https://github.com/acquaa-org/acquaa/blob/gh-pages/images/option_1_api_integration.png|Option 1]]
 
-2. Send events/messages to a callback URL(webhook)
-   - customer exposes an API endpoint where Acquaa can send events as they occur.
-   - event contract will be published.
-   - secured via an API key or JWT.
-   - failures will be retried thrice at exponentially increasing times (configurable).
+#### Option 2: Acquaa builds and hosts a client app to interface with the customer's internal system(s).
+
+- Customer has to expose the system to the outside world - with appropriate security mechanisms in place.
+- Custom integration per client can take time as we need insights into their system(s).
+- Development/deployment of client app into Acquaa's data centre.
+
 [[https://github.com/acquaa-org/acquaa/blob/gh-pages/images/option_2_api_integration.png|Option 2]]
 
-3. Custom integration with the system (this is time-consuming and expensive as we'll need to get an insight and access into the customer's internal systems). If done, it will most likely be through a proxy fronting the internal system.
+**For all the options,**
+- Communication is preferred via APIs.
+- Secured via an API key/JWT/Basic Auth.
+- Acquaa API will allow updates to certain resources (e.g. internal identifiers, master data for the organisation).
+- Subject to rate limitations.
+- API failures will be retried thrice at exponentially increasing times (configurable).
+- The API calls can be synchronous or asynchronous based on the process.
+- SLAs will be clearly defined and upgrades/outages clearly communicated from both sides.
+- Escalation channels in case of issues will be established.
 
 ## Data Import
 - Expose APIs to import this data into Acquaa (e.g. master data like equipment type, sizes etc.).
