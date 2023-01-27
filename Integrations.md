@@ -41,3 +41,6 @@ To integrate with the customer's internal systems, we propose the following opti
 ## Logs & Reports
 - Audit logs for user actions will be provided within the app.
 - Offline (bulk) reports can be generated via the system.
+- System (network/security) logs will be retained for seven years but will be available for immediate access only for three years.
+- Application logs will be retained for 30 days and then moved to offline storage. These will be deleted after a year.
+- Application audit logs will be accessible as long as the app is available.
