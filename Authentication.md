@@ -4,11 +4,11 @@ Acquaa uses Auth0 as the federated identity management system for authentication
 ![Authentication Flow](https://github.com/acquaa-org/acquaa/blob/gh-pages/images/authentication.png)
 
 ## Steps for creating an app in Azure AD
-1. Create an app in Azure AD. We will require one for each environment - ie UAT, Prod
-2. Configure the redirect URI (Get it from Acquaa engineering team)
-3. For "Supported account types", use 'Single Tenant'
-4. Create teh app and generate a client secret for use by Auth0 (Refer to https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-credentials).
-5. Add the following permissions for the app: Users > User.Read (This is for Auth0 to get user profile details such as name, email)
+1. Create an app in Azure AD. We will require one for each environment - ie UAT, Prod.
+2. Configure the redirect URI (get it from Acquaa engineering team).
+3. For "Supported account types", use 'Single Tenant'.
+4. Create the app and generate a client secret for use by Auth0 (Refer to https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-credentials).
+5. Add the following permissions for the app: Users > User.Read (This is for Auth0 to get user profile details such as name, email).
 
 Note down the following information as they are needed for configuring Auth0
 1. Client ID (App ID)
