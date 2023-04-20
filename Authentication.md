@@ -10,7 +10,7 @@ Acquaa uses Auth0 as the federated identity management system for authentication
 4. Create the app and generate a client secret for use by Auth0 (Refer to https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-credentials).
 5. Add the following permissions for the app: Users > User.Read (This is for Auth0 to get user profile details such as name, email).
 
-Note down the following information as they are needed for configuring Auth0
+Note down the following information as they are needed for configuring Auth0 (to be given to the Acquaa team)
 1. Client ID (App ID)
 2. Client secret
 3. Microsoft Azure AD Domain
